@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Roboto+Serif:ital,opsz,wght@0,8..144,200;1,8..144,200&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Gideon Roman', cursive;
+    text-align: center  ;
+    /* text-decoration: none;
+    list-style: none; */
+}
+.Div_Reg_Container,.Div_Log_Container{
+    width: 100%;
+    height: 630px;;
+    background:url("media/banner1.jpg") no-repeat 0px 0px ;
+    display: flex;
+     justify-content: center;
+    align-items: center;
+}
+.Div_Reg_Container form{
+        /* border: 1px solid white; */
+        width: 400px;
+        height: 500px;
+        background-color: rgba(4, 4, 4, 0.56);
+        opacity: 0.8;
+        -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+       -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+        box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+        border-radius: 10px;
+ }
+ .Div_Log_Container form{
+             /* border: 1px solid white; */
+             width: 400px;
+             height: 400px;
+             background-color: rgba(4, 4, 4, 0.56);
+             opacity: 0.8;
+             -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+            -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+             box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+             border-radius: 10px;
+
+ }
+/* .Form_Inp{
+    width: 250px;
+    height: 100px;
+    background-color:rebeccapurple;
+} */
+.Form_Inp input,.Log_Form_Inp input{
+    width: 250px;
+    height: 50px;
+    border: none;
+    border-bottom: 1px solid #DCCBCF;
+    background-color: rgba(4, 4, 4, 0.56);
+    background: transparent;
+    /* opacity: 0.8; */
+    color: white;
+    /* margin: 5px; */
+    outline: none;
+}
+.Form_Reg,.Log_P{
+    margin: 20px;
+    font-size: 40px;
+    color: beige;
+}
+.Form_Sub input,.Log_Form_Sub input{
+    margin-top: 30px ;
+    width: 170px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+.Form_Sub input:hover{
+    background-color: white;
+    color: blue ;
+    cursor: pointer;
+}
+.Log_Form_Sub input:hover{
+    background-color: white;
+    color: blue ;
+    cursor: pointer;
+}
+.Login_Link,.Register_Link{
+    margin-top: 25px;
+    opacity: none;
+}
+.Login_Link a,.Register_Link a{
+    text-decoration: none;
+   font-size: 20px;
+   color: white;
+   font-family: 'Roboto Serif', serif;
+}
+.Login_Link a,.Register_Link a:hover{
+    text-decoration: underline solid 1px;
+    font-size: 21px;
+}
+@media (max-width:420px) {
+    .Div_Reg_Container form{
+        width: 100%;
+        border-radius: none;
+        /* background-color: #DCCBCF; */
+    }
+    .Div_Log_Container form{
+        width: 100%;
+        border-radius: none;
+    }
+}
+

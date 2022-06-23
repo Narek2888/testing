@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'res_log.css' %}">
+</head>
+<body>
+    
+    <div class="Div_Reg_Container">
+        <form action="/signup" method="POST" id="My_Form" >
+            {% csrf_token %}
+            <p class="Form_Reg">Register</p>
+            <div class="Form_fName Form_Inp">
+                <input type="text" name="first_name" maxlength="50" required="" id="id_first_name" placeholder="First Name">
+                <!-- <input type="text" name="first_name" id="first_name" class="fName_Inp" placeholder="First Name"> -->
+            </div>
+            <div class="Form_lName Form_Inp">
+                <input type="text" name="last_name" maxlength="50" required="" id="id_last_name" placeholder="Last Name">
+                <!-- <input type="text" name="last_name" id="last_name" class="lName_Inp" placeholder="Last Name"> -->
+            </div>
+            <div class="Form_Email Form_Inp">
+                <input type="email" name="email" required="" id="id_email" placeholder="Email Address">
+                <!-- <input type="email" name="mail" id="mail" class="Email_Inp" placeholder="Email Address"> -->
+            </div>
+            <div class="Form_Pass Form_Inp">
+                <input type="password" name="password1" autocomplete="new-password" required="" id="id_password1" placeholder="Password">
+                <!-- <input type="password" name="password1" id="password1" class="Pass_Inp" placeholder="Password"> -->
+            </div>
+            <div class="Form_Cpass Form_Inp">
+                <input type="password" name="password2" autocomplete="new-password" required="" id="id_password2" placeholder="Confirm Password">
+                <!-- <input type="password" name="password2" id="password2" class="Cpass_Inp" placeholder="Confirm Password"> -->
+            </div>
+            <div class="Form_Sub Form_Inp">
+                <input type="submit" name="Send_Sub" id="Send_Id_Sub" class="Send_But" value="Registration">
+            </div>
+            <div class="Login_Link">
+                <a href="login">Already Aave An Account?</a>
+            </div>
+    
+        </form>
+    </div>
+</body>
+</html>
+
