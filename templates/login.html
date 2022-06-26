@@ -13,7 +13,6 @@
         
         <form action="/login" method="post" name="Log_Form_Name" id="My_Log_Form" >
             {% csrf_token %}
-            {{ form }}
             <p class="Log_P">LogIn</p>
             <div class="Log_Form_fName  Log_Form_Inp">
                 <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_username" placeholder="First Names">
