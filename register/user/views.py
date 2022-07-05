@@ -1,3 +1,4 @@
+from distutils.log import error
 from django.shortcuts import redirect, render
 from django.contrib.auth import authenticate, login
 from .forms import SignUpForm, LogInForm
@@ -8,8 +9,10 @@ def home(request):
     return render(request, 'home.html')
 
 def signup(request):
+
     if request.method == "POST":
         form = SignUpForm(request.POST)
+        
         if form.is_valid():
             form.save()
             return redirect('home')
