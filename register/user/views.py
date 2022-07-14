@@ -1,4 +1,5 @@
 from distutils.log import error
+from multiprocessing import context
 from django.shortcuts import redirect, render
 from django.contrib.auth import authenticate, login
 from .forms import SignUpForm, LogInForm
@@ -10,6 +11,8 @@ def home(request):
 
 def signup(request):
 
+    error = ""
+
     if request.method == "POST":
         form = SignUpForm(request.POST)
         
@@ -18,7 +21,9 @@ def signup(request):
             return redirect('home')
     else:
         form = SignUpForm()
-    return render(request, 'signup.html', {'form': form})
+        error = form.errors
+    context = {'form': form, 'error': error}
+    return render(request, 'signup.html', context)
 
 def login(request):
     if request.method == "POST":

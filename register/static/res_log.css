@@ -106,3 +106,6 @@ body{
     }
 }
 
+.alert alert-danger{
+    position: relative;
+}
